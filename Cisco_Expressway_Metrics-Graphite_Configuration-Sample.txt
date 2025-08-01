@@ -1,0 +1,147 @@
+How the Configuration Is Applied: Sample Graphite Configuration
+
+[
+    {
+    "target": [
+      "collectd.<Server-1>.load.load.midterm",
+      "collectd.<Server-2>.load.load.midterm",
+      "collectd.<Server-3>.load.load.midterm",
+      "collectd.<Server-4>.load.load.midterm",
+      "collectd.<Server-5>.load.load.midterm",
+      "collectd.<Server-6>.load.load.midterm",
+    ],
+    "title": "5 Min LoadAverage"
+    },
+    {
+    "target": [
+      "collectd.<Server-1>.uptime.uptime",
+      "collectd.<Server-2>.uptime.uptime",
+      "collectd.<Server-3>.uptime.uptime",
+      "collectd.<Server-4>.uptime.uptime",
+      "collectd.<Server-5>.uptime.uptime",
+      "collectd.<Server-6>.uptime.uptime",
+    ],
+    "title": "UpTime"
+  },
+  {
+    "target": [
+      "collectd.<Server-1>.users.users",
+      "collectd.<Server-2>.users.users",
+      "collectd.<Server-3>.users.users",
+      "collectd.<Server-4>.users.users",
+      "collectd.<Server-5>.users.users",
+      "collectd.<Server-6>.users.users",
+    ],
+    "title": "Users"
+  },
+  {
+    "target": [
+      "collectd.SERVER-1.exec-app.gauge-active_calls",
+      "collectd.SERVER-2.exec-app.gauge-active_calls",
+      "collectd.SERVER-3.exec-app.gauge-active_calls",
+      "collectd.SERVER-4.exec-app.gauge-active_calls",
+      "collectd.SERVER-5.exec-app.gauge-active_calls",
+      "collectd.SERVER-6.exec-app.gauge-active_calls"
+    ],
+    "title": "Number_of_calls"
+  },
+  {
+    "target": [
+      "collectd.SERVER-1.exec-app.gauge-active_alarms",
+      "collectd.SERVER-2.exec-app.gauge-active_alarms",
+      "collectd.SERVER-3.exec-app.gauge-active_alarms",
+      "collectd.SERVER-4.exec-app.gauge-active_alarms",
+      "collectd.SERVER-5.exec-app.gauge-active_alarms",
+      "collectd.SERVER-6.exec-app.gauge-active_alarms"
+    ],
+    "title": "Alarm"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+      "collectd.<SERVER-2>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+      "collectd.<SERVER-3>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+      "collectd.<SERVER-4>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+      "collectd.<SERVER-5>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+      "collectd.<SERVER-6>.statsd.gauge-MRARegsitrations_number_of_registrations_current",
+    ],
+    "title": "Active MRA Registration in Expressway-E"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.aggregation-cpu-average.cpu-user",
+      "collectd.<SERVER-2>.aggregation-cpu-average.cpu-user",
+      "collectd.<SERVER-3>.aggregation-cpu-average.cpu-user",
+      "collectd.<SERVER-4>.aggregation-cpu-average.cpu-user",
+      "collectd.<SERVER-5>.aggregation-cpu-average.cpu-user",
+      "collectd.<SERVER-6>.aggregation-cpu-average.cpu-user"
+    ],
+    "title": "Avg-CPU-User"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.aggregation-cpu-average.cpu-system",
+      "collectd.<SERVER-2>.aggregation-cpu-average.cpu-system",
+      "collectd.<SERVER-3>.aggregation-cpu-average.cpu-system",
+      "collectd.<SERVER-4>.aggregation-cpu-average.cpu-system",
+      "collectd.<SERVER-5>.aggregation-cpu-average.cpu-system",
+      "collectd.<SERVER-6>.aggregation-cpu-average.cpu-system"
+    ],
+    "title": "Avg-CPU-System"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.memory.memory-used",
+      "collectd.<SERVER-2>.memory.memory-used",
+      "collectd.<SERVER-3>.memory.memory-used",
+      "collectd.<SERVER-4>.memory.memory-used",
+      "collectd.<SERVER-5>.memory.memory-used",
+      "collectd.<SERVER-6>.memory.memory-used"
+    ],
+    "title": "Memory-Used"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.memory.memory-free",
+      "collectd.<SERVER-2>.memory.memory-free",
+      "collectd.<SERVER-3>.memory.memory-free",
+      "collectd.<SERVER-4>.memory.memory-free",
+      "collectd.<SERVER-5>.memory.memory-free",
+      "collectd.<SERVER-6>.memory.memory-free"
+    ],
+    "title": "Memory-Free"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.memory.memory-cached",
+      "collectd.<SERVER-2>.memory.memory-cached",
+      "collectd.<SERVER-3>.memory.memory-cached",
+      "collectd.<SERVER-4>.memory.memory-cached",
+      "collectd.<SERVER-5>.memory.memory-cached",
+      "collectd.<SERVER-6>.memory.memory-cached"
+    ],
+    "title": "Memory-cached"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.memory.memory-buffered",
+      "collectd.<SERVER-2>.memory.memory-buffered",
+      "collectd.<SERVER-3>.memory.memory-buffered",
+      "collectd.<SERVER-4>.memory.memory-buffered",
+      "collectd.<SERVER-5>.memory.memory-buffered",
+      "collectd.<SERVER-6>.memory.memory-buffered"
+    ],
+    "title": "Memory-buffered"
+  },
+  {
+    "target": [
+      "collectd.<SERVER-1>.processes.ps_state-stopped",
+      "collectd.<SERVER-2>.processes.ps_state-stopped",
+      "collectd.<SERVER-3>.processes.ps_state-stopped",
+      "collectd.<SERVER-4>.processes.ps_state-stopped",
+      "collectd.<SERVER-5>.processes.ps_state-stopped",
+      "collectd.<SERVER-6>.processes.ps_state-stopped"
+    ],
+    "title": "stopped-process"
+  }
+]
