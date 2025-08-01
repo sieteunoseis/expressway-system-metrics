@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  graphite:
+    build: .
+    container_name: graphite-collectd
+    ports:
+      - "8081:80"          # Graphite web interface
+      - "2003:2003"        # Carbon line receiver
+      - "8125:8125/udp"    # StatsD
+      - "8126:8126"        # StatsD admin
+      - "25826:25826/udp"  # Collectd network plugin
+    environment:
+      - STATSD_INTERFACE=udp
+      - GRAPHITE_STATSD_HOST=graphite
+      - GRAPHITE_TIME_ZONE=America/Los_Angeles
+      - COLLECTD=1
+    volumes:
+      - ./data/graphite/storage:/opt/graphite/storage
+      - ./data/graphite/conf:/opt/graphite/conf
+      - ./data/statsd:/opt/statsd/config
+    networks:
+      - nginx_default
+    restart: always
+
+networks:
+  nginx_default:
+    external: true
